@@ -1,11 +1,8 @@
 import sys
 
 vowels = "aeiou"
-line = 1
 
 for words in sys.stdin:
-    print("This is line", line)
-    line += 1
     for word in words.split():
         counter = 0
         vowelcount = 0
@@ -14,4 +11,7 @@ for words in sys.stdin:
                 vowelcount += 1
             counter += 1
         else:
-            print("There are ", vowelcount, " vowels in '", word,"'", sep='')
+            if vowelcount == 1:
+                print('-\tThere is', vowelcount, 'vowel in: "' + word + '"\n')
+            else:
+                print('-\tThere are', vowelcount, 'vowels in: "' + word + '"\n')
