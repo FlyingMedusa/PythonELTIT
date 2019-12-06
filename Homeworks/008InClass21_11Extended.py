@@ -9,7 +9,7 @@ if choice == "w":
         n_vowels = mod.single_words(word)
         mod.printing_result(n_vowels, word)
 
-elif choice == "l":w
+elif choice == "l":
     list = input("Give me a word list separated by spaces: ")
     list = list.split()
     for word in list:

@@ -18,8 +18,8 @@ for line in words:
             counter += 1
         else:
             if vowelcount == 1:
-                text = 'There is 1 word in: "{}"\n'.format(word)
+                text = 'There is 1 vowel in: "{}"\n'.format(word)
             else:
-                text = 'There are {} words in: "{}"\n'.format(vowelcount, word)
+                text = 'There are {} vowels in: "{}"\n'.format(vowelcount, word)
             print(text)
 
