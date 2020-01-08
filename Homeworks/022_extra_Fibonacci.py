@@ -8,7 +8,11 @@ def fib(n):
 
 
 while True:
-    n = int(input("Give me a number:\t"))
+    try:
+        n = int(input("Give me a number:\t"))
+    except Exception:
+        print("Oh no! Don't try to do that!")
+        continue
     if n >= 0:
         print(fib(n))
         break
