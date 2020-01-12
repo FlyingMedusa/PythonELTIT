@@ -1,4 +1,4 @@
-filename = 'alice_for_020task.txt'
+filename = 'alice_for_019task.txt'
 
 word_list = []
 wordlengths = {}
@@ -7,7 +7,7 @@ wordlengths = {}
 with open(filename, 'r', encoding='utf-8') as f:
     all_lines = f.readlines()
 
-#starts from index 254 (not 255) because lines in text start with 1, but any list start with index 0
+#starts from index 254 (not 255) because lines in text start with 1, but any list starts with index 0
 all_lines = all_lines[254:]
 for line in all_lines:
     words = line.split()
