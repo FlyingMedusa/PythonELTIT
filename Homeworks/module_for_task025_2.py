@@ -21,3 +21,15 @@ def get_sentences(text):
             final_text.append(elem)
             elem = ""
     return final_text
+
+
+def trim_sentences(sentences):
+    trimmed_sentences = []
+    for sentence in sentences:
+        new_sentence = sentence.strip()
+        trimmed_sentences.append(new_sentence)
+    return trimmed_sentences
+
+
+def get_word_count(sentence):
+    return len(sentence.split())
