@@ -3,7 +3,7 @@ import module_for_task025_2 as string
 import matplotlib.pyplot as plt
 
 
-text = read.get_text('alice_for_019task.txt', 710)
+text = read.get_text('alice_text.txt', 710)
 
 cleaned_text = string.clean_whitespaces(text)
 

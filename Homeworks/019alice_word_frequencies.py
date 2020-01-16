@@ -1,4 +1,4 @@
-filename = 'alice_for_019task.txt'
+filename = 'alice_text.txt'
 
 word_list = []
 wordlengths = {}
