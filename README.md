@@ -1,6 +1,7 @@
-## PythonELTIT
+## PythonELTIT 
+:octocat:
 
-<p> A repository for homeworks and personal projects concerning
+<p> A repository for homeworks and personal projects concerning 
 <br> English Linguistics: Theories, Interfaces, Technology </p>
 
 #### Homeworks:
@@ -18,4 +19,4 @@ Content: <br>
  - recursion
  - regular expressions
 
-![spectogram and waveform](spectogram.png)
+![spectogram and waveform](spectogram.png =250x)
