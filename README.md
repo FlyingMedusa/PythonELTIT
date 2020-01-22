@@ -18,4 +18,4 @@ Content: <br>
  - recursion
  - regular expressions
 
-![spectogram and waveform](.\spectogram.png)
+![spectogram and waveform](spectogram.png)
