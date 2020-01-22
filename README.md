@@ -18,4 +18,4 @@ Content: <br>
  - recursion
  - regular expressions
 
-![spectogram and waveform](D:\PythonELTIT\spectogram.png)
+![spectogram and waveform](.\spectogram.png)
