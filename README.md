@@ -17,3 +17,5 @@ Content: <br>
  - matplotlib.pyplot
  - recursion
  - regular expressions
+
+![spectogram and waveform](D:\PythonELTIT\spectogram.png)
