@@ -34,10 +34,12 @@ x_values = ["very short", "short", "medium", "long", "very long"]
 y_values = [very_short, short, medium, long, very_long]
 
 fig, ax = plt.subplots()
-ax.plot(x_values, y_values)
-
-ax.set(xlabel='sentence length', ylabel='number of sentences',
-       title='Dividing sentences by their length')
-ax.grid()
+plt.title('The distribution of sentence types \n by word count', fontsize=18)
+plt.xlabel('Sentence length', color="grey")
+plt.ylabel('Number of sentences', color="grey")
+plt.bar(x_values, y_values, color="darkgrey")
+plt.xticks(x_values, ("very short", "short", "medium", "long", "very long"))
+plt.plot(x_values, y_values, color="darkred")
+plt.show()
 
 plt.show()

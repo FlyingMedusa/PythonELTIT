@@ -11,3 +11,7 @@ for link in links1:
         print("MATCHED\t", link)
     else:
         print("not matched\t", link)
+
+# a possible solution - http(s)?:\/\/\w+((\.\w+)?)+$
+
+# however a dollar sign is required
