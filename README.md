@@ -19,5 +19,4 @@ Content: <br>
  - recursion
  - regular expressions
 
-![plot 1](figure1.png)
-![spectogram and waveform](spectogram.png)
+![plot, spectogram, waveform](figures.png)
