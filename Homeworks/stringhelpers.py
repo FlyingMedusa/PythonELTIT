@@ -41,4 +41,3 @@ def get_word_count(sentences):
         if character == " ":
           count +=1
     return count
-        
