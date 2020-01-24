@@ -3,7 +3,7 @@ import stringhelpers
 import re
 
 
-fulltext = filehelpers.get_text('alice_text.txt',750)
+fulltext = filehelpers.get_text('alice.txt',750)
 cleantext = stringhelpers.clean_whitespaces(fulltext)
 
 # get words in cleantext
