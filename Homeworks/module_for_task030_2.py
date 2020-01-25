@@ -71,7 +71,7 @@ def get_words_freq(words):
             wordlist[w] = 1
     return wordlist
 
-
+"""
 def get_clusters_freq(words):
     clusters = {}
     for w in words:
@@ -82,6 +82,20 @@ def get_clusters_freq(words):
                 clusters[onset] += 1
             else:
                 clusters[onset] = 1
+    return clusters
+"""
+
+
+def get_clusters_freq(words):
+    clusters = {}
+    for w in words:
+        m = re.search('[^aeiouy]{2,}$', w)
+        if m:
+            coda = w[m.start():]
+            if coda in clusters:
+                clusters[coda] += 1
+            else:
+                clusters[coda] = 1
     return clusters
 
 
