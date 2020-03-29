@@ -11,3 +11,13 @@ doc = BeautifulSoup(data, 'html.parser')
 staff_content = doc.find(id='tresc_wlasciwa')
 
 links = staff_content.find_all('a')
+
+urls = []
+
+for link in links:
+    if len(link.get_text()) > 1:
+        url = link['href']
+        urls.append(url)
+
+print('Urls found:')
+print('\n'.join(urls))
