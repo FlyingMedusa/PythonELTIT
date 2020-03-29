@@ -2,24 +2,29 @@ import urllib.request
 from bs4 import BeautifulSoup
 import urllib.parse
 
-print('Getting staff urls...')
 
-staff_url = 'http://wa.amu.edu.pl/wa/en/staff_list'
-response = urllib.request.urlopen(staff_url)
-data = response.read()
-doc = BeautifulSoup(data, 'html.parser')
+def main():
+    print('Getting staff urls...')
 
-staff_content = doc.find(id='tresc_wlasciwa')
+    staff_url = 'http://wa.amu.edu.pl/wa/en/staff_list'
+    response = urllib.request.urlopen(staff_url)
+    data = response.read()
+    doc = BeautifulSoup(data, 'html.parser')
 
-links = staff_content.find_all('a')
+    staff_content = doc.find(id='tresc_wlasciwa')
 
-urls = []
+    links = staff_content.find_all('a')
 
-for link in links:
-    if len(link.get_text()) > 1:
-        base_url = 'http://wa.amu.edu.pl'
-        url = urllib.parse.urljoin(base_url, link['href'])
-        urls.append(url)
+    urls = []
 
-print('Urls found:')
-print('\n'.join(urls))
+    for link in links:
+        if len(link.get_text()) > 1:
+            base_url = 'http://wa.amu.edu.pl'
+            url = urllib.parse.urljoin(base_url, link['href'])
+            urls.append(url)
+
+    print('Urls found:')
+    print('\n'.join(urls))
+
+
+main()
