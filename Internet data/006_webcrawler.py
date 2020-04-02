@@ -23,8 +23,6 @@ def main():
     for url in urls:
         print(get_details(url))
 
-    print('Urls found:')
-    print('\n'.join(urls))
 
 
 def get_content(url):
