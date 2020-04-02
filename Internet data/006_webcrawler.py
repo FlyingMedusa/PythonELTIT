@@ -1,6 +1,7 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import urllib.parse
+from datetime import datetime
 
 
 def main():
@@ -54,4 +55,8 @@ def get_details(url):
     return header.get_text() + ' (no email found)'
 
 
+start = datetime.now().timestamp()
 main()
+end = datetime.now().timestamp()
+duration = end - start
+print('Processing time = ' + str(duration))
