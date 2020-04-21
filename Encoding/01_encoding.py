@@ -1,5 +1,3 @@
-
-
 f = open('r1251.txt', 'rb')
 r = f.read()
 r = r.decode('1251') # windows-1251 encoding

@@ -5,30 +5,6 @@ from datetime import datetime
 from multiprocessing import Pool
 
 
-def main():
-    print('Getting staff urls...')
-
-    staff_url = 'http://wa.amu.edu.pl/wa/en/staff_list'
-    staff_content = get_content(staff_url)
-
-    links = staff_content.find_all('a')
-
-    urls = []
-
-    for link in links:
-        if len(link.get_text()) > 1:
-            base_url = 'http://wa.amu.edu.pl'
-            url = urllib.parse.urljoin(base_url, link['href'])
-            encoded_url = fix_encoding(url)
-            urls.append(encoded_url)
-
-    print('Staff emails found:')
-
-    if __name__ == '__main__':
-        mypool = Pool()
-        mypool.map(print_details, urls)
-
-
 def fix_encoding(url):
     components = urllib.parse.urlsplit(url)
     components = list(components)
@@ -62,4 +38,28 @@ def get_details(url):
     return header.get_text() + ' (no email found)'
 
 
-main()
+def main():
+    print('Getting staff urls...')
+
+    staff_url = 'http://wa.amu.edu.pl/wa/en/staff_list'
+    staff_content = get_content(staff_url)
+
+    links = staff_content.find_all('a')
+
+    urls = []
+
+    for link in links:
+        if len(link.get_text()) > 1:
+            base_url = 'http://wa.amu.edu.pl'
+            url = urllib.parse.urljoin(base_url, link['href'])
+            encoded_url = fix_encoding(url)
+            urls.append(encoded_url)
+
+    print('Staff emails found:')
+
+    mypool = Pool()
+    mypool.map(print_details, urls)
+
+
+if __name__ == '__main__':
+    main()
